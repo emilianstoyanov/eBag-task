@@ -6,8 +6,21 @@
     run the command in the terminal: python caller.py
     ```
 
+* PostgreSQL database used
 
+    ```bash
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": '',
+            "USER": '',
+            "PASSWORD": '',
+            "HOST": "localhost",
+            "PORT": "5432",
+        }
+    }
 
+    ```
 
 # Requirements
 
