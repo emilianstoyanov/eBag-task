@@ -19,6 +19,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+# For security purposes, sensitive data must be exported to an .env file!!!
 SECRET_KEY = 'django-insecure-u(%4j%bk^b^h=heazibf363nyf$4zj2)93(=p=5c*ql#bsw77*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -70,9 +72,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'category_tree_project.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# For security purposes, sensitive data must be exported to an .env file!!!
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
