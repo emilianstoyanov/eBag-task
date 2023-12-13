@@ -1,3 +1,14 @@
+
+
+*  Populate Django DB Script
+
+    ```bash
+    run the command in the terminal: python caller.py
+    ```
+
+
+
+
 # Requirements
 
 ```
