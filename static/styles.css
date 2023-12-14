@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
+    text-align: center;
 
 .card-box {
     border: 1px solid #ccc;
@@ -47,3 +47,8 @@
 .similar-categories {
     color: #007bff;
 }
+
+.all-categories-heading {
+    margin-top: 20px;
+}
+

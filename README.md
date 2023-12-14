@@ -20,7 +20,7 @@
 
 * **Creating categories**
 
-    - With CRUD operations:
+    - With API request:
         - Headers:
 
         ```
