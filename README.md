@@ -1,5 +1,31 @@
 
 
+* API ROOT
+
+    ```python
+    http://127.0.0.1:8000/
+    ```
+
+* All categories
+
+    ```python
+    http://127.0.0.1:8000/categories/
+    ```
+
+* Basic index page
+
+    ```python
+    http://127.0.0.1:8000/index/
+    ```
+
+* CRUD operations:
+    - GET http://127.0.0.1:8000/categories/
+    - GET http://127.0.0.1:8000/categories/{id}/
+    - PUT http://127.0.0.1:8000/categories/{id}/
+    - DELETE http://127.0.0.1:8000/categories/{id}/
+
+
+
 *  Populate Django DB Script
 
     ```bash
@@ -21,6 +47,7 @@
     }
 
     ```
+
 
 # Requirements
 
