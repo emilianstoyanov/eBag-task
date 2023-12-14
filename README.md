@@ -18,11 +18,24 @@
     http://127.0.0.1:8000/index/
     ```
 
-* CRUD operations:
+* URLs for CRUD operations:
     - GET http://127.0.0.1:8000/categories/
     - GET http://127.0.0.1:8000/categories/{id}/
     - PUT http://127.0.0.1:8000/categories/{id}/
     - DELETE http://127.0.0.1:8000/categories/{id}/
+    - POST http://127.0.0.1:8000/categories/
+
+        Body:
+        
+                {
+                    "name": "category name",
+                    "description": "description",
+                    "image": null,
+                    "parent": null,
+                    "similar_categories": []
+                }
+
+
 
 
 
