@@ -6,12 +6,11 @@
   <link rel="stylesheet" type="text/css" href="{% static 'styles.css/' %}">
 </head>
 
-x<!-- Catalog with Albums -->
 <section id="catalogPage">
 
     {% if not categories %}
     <!-- If No albums in catalog -->
-    <p>No Category</p>
+    <h2>There are no existing categories!!!</h2>
     {% else %}
     <!-- If albums in catalog -->
     <h1>All Categories</h1>
@@ -22,7 +21,12 @@ x<!-- Catalog with Albums -->
         </div>
         <div class="album-details">
             <h2 class="album-name">{{ category.name }}</h2>
-            <p class="description">Description: {{ category.description }}</p>
+             <p class="description" id="description{{ forloop.counter }}">
+                Description: {{ category.description | truncatechars:20 }}
+                {% if category.description and length > 20 %}
+                    <span class="read-more" onclick="toggleDescription({{ forloop.counter }})">Read more</span>
+                {% endif %}
+            </p>
             <p class="parent-category">Parent: {% if category.parent %}{{ category.parent.name }}{% else %}None{% endif %}</p>
             <p class="similar-categories">Similar Categories: {% for similar_category in category.similar_categories.all %}{{ similar_category.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
         </div>
