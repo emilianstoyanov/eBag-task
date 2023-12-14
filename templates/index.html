@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css/' %}">
+</head>
+
+x<!-- Catalog with Albums -->
+<section id="catalogPage">
+
+    {% if not categories %}
+    <!-- If No albums in catalog -->
+    <p>No Category</p>
+    {% else %}
+    <!-- If albums in catalog -->
+    <h1>All Categories</h1>
+    {% for category in categories %}
+    <div class="card-box">
+        <div class="album-image">
+<!--            <img src="{{ category.image }}" alt="{{ category.name }}">-->
+        </div>
+        <div class="album-details">
+            <h2 class="album-name">{{ category.name }}</h2>
+            <p class="description">Description: {{ category.description }}</p>
+            <p class="parent-category">Parent: {% if category.parent %}{{ category.parent.name }}{% else %}None{% endif %}</p>
+            <p class="similar-categories">Similar Categories: {% for similar_category in category.similar_categories.all %}{{ similar_category.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+</section>
+
+</html>

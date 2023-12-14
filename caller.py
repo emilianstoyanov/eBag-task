@@ -9,4 +9,4 @@ django.setup()
 from automatic_recording_db import populate_model_with_data
 from category_tree.models import Category
 
-populate_model_with_data(Category, 200)
+populate_model_with_data(Category, 50)
