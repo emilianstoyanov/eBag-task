@@ -1,51 +1,64 @@
 
 
-* API ROOT
+* **API ROOT**
 
     ```python
     http://127.0.0.1:8000/
     ```
 
-* All categories
+* **All categories**
 
     ```python
     http://127.0.0.1:8000/categories/
     ```
 
-* Basic index page
+* **Basic index page**
 
     ```python
     http://127.0.0.1:8000/index/
     ```
 
-* URLs for CRUD operations:
-    - GET http://127.0.0.1:8000/categories/
-    - GET http://127.0.0.1:8000/categories/{id}/
-    - PUT http://127.0.0.1:8000/categories/{id}/
-    - DELETE http://127.0.0.1:8000/categories/{id}/
-    - POST http://127.0.0.1:8000/categories/
+* **Creating categories**
 
-        Body:
-        
-                {
-                    "name": "category name",
-                    "description": "description",
-                    "image": null,
-                    "parent": null,
-                    "similar_categories": []
-                }
+    - With CRUD operations:
+        - Headers:
 
+        ```
+            Key: Content-Type
+            Value: application/json
+        ```
 
+        - GET http://127.0.0.1:8000/categories/
+        - GET http://127.0.0.1:8000/categories/{id}/
+        - PUT http://127.0.0.1:8000/categories/{id}/
+        - DELETE http://127.0.0.1:8000/categories/{id}/
+        - POST http://127.0.0.1:8000/categories/
 
+            Body:
+            
+                    {
+                        "name": "category name",
+                        "description": "description",
+                        "image": null,
+                        "parent": null,
+                        "similar_categories": []
+                    }
 
+    - With Django admin panel:
+        - Creating a Superuser (Admin User):
 
-*  Populate Django DB Script
+            ```python
+            python manage.py createsuperuser
+            ```
+        - login: http://127.0.0.1:8000/admin/
+
+*  **Populate Django DB Script**
 
     ```bash
     run the command in the terminal: python caller.py
     ```
 
-* PostgreSQL database used
+* **PostgreSQL database used**
 
     ```bash
     DATABASES = {
