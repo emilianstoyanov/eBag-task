@@ -24,4 +24,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index, name='index'),
     path('api/', include('rest_framework.urls', namespace='rest_framework')),
+
 ]
+# {
+#     "id": 2188,
+#     "name": "D",
+#     "description": "D Category",
+#     "image": null,
+#     "parent": null,
+#     "similar_categories": [
+#         2186,
+#         2187
+#     ]
+# },
