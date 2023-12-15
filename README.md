@@ -63,6 +63,11 @@
     ```bash
     run: python search_rabbit_hole.py
     ```
+*  **Finds all rabbit islands**
+
+    ```bash
+    run: python search_rabbit_islands.py
+    ```
 
 * **PostgreSQL database used**
 
